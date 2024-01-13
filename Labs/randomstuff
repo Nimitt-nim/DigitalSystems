@@ -290,3 +290,14 @@ endmodule
     OUT3[2]  = (d | c | b | a);
     OUT3[1]  = (e | d | c | b | a);
     OUT3[0]  = (1); 
+
+
+
+        Rd[2] = (~e);
+        Rd[3] = ( ~a~b~c~d~e + ~a~b~cde + ~a~bcd~e + ~ab~c~de + ~abc~d~e + ~abcde + a~b~cd~e + a~bc~de + ab~c~d~e + ab~cde + abcd~e);
+        Rd[4] = (~d~e);
+        Rd[5] = (~a~b~c~d~e + ~a~bc~de + ~ab~cd~e + ~abcde + a~bc~d~e + ab~c~de + abcd~e);
+        Rd[6] = (~a~b~c~d~e + ~a~bcd~e + ~abc~d~e + a~b~cd~e + ab~c~d~e + abcd~e);
+        Rd[7] = (~a~b~c~d~e + ~a~bcde + ~abcd~e + a~bc~de + abc~d~e);
+        Rd[8] = (~c~d~e);
+        Rd[9] = ( ~a~b~c~d~e + ~ab~c~de + a~b~cd~e + ab~cde);
