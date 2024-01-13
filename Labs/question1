@@ -1,6 +1,6 @@
 module SmartMathTutor{
-    input [3:0]S;
-    input[4:0]R;
+    input [3:0] S;
+    input[4:0] R;
     output OUT;
 }
     reg [31:0] Rd;
