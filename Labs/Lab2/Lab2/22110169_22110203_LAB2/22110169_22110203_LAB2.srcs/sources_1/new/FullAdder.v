@@ -1,0 +1,38 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 01/21/2024 09:07:38 AM
+// Design Name: 
+// Module Name: FullAdder
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module FullAdder(
+    input A,
+    input B,
+    input Cin,
+    output Sum,
+    output Cout
+    );
+    and a1(f, Cin,A);
+    and a2(g, A, B);
+    and a3(h, B, Cin);
+    or a4(Cout, f, g, h);
+    
+    xor a5(i, A, B);
+    xor a6(Sum,i,Cin);
+    
+endmodule

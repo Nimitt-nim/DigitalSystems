@@ -1,0 +1,38 @@
+Combined Adder Subtractor Gray Converter
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 01/21/2024 09:21:13 AM
+// Design Name: 
+// Module Name: Combined
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module Combined(
+    input [7:0] A,
+    input [7:0] B,
+    input Mode,
+    output [8:0] OUT
+    );
+    wire Cout;
+    wire [7:0] adderOut;
+    wire [8:0]adderOut9;
+    AdderSubtractor8b a1(.A(A), .B(B), .Mode(Mode), .OUT(adderOut), .Cout(Cout));
+    assign adderOut9[7:0] = adderOut;
+    assign adderOut9[8] = Cout;
+    GrayConverter g1(.A(adderOut9), .OUT(OUT));
+    
+endmodule

@@ -1,0 +1,7 @@
+Running: xsim.dir/AdderSubtractor8b_tb_behav/xsimk.exe -simmode gui -wdb AdderSubtractor8b_tb_behav.wdb -simrunnum 0 -socket 51427
+Design successfully loaded
+Design Loading Memory Usage: 6764 KB (Peak: 6764 KB)
+Design Loading CPU Usage: 62 ms
+Simulation completed
+Simulation Memory Usage: 7436 KB (Peak: 7436 KB)
+Simulation CPU Usage: 77 ms

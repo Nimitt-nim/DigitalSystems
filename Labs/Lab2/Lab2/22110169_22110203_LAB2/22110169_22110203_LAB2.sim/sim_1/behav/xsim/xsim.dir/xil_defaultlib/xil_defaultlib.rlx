@@ -1,0 +1,13 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Users/student/22110169_22110203_LAB2/22110169_22110203_LAB2.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/Users/student/22110169_22110203_LAB2/22110169_22110203_LAB2.srcs/sim_1/new/AdderSubtractor8b_tb.v,1705816298,verilog,,,,AdderSubtractor8b_tb,,,,,,,,
+C:/Users/student/22110169_22110203_LAB2/22110169_22110203_LAB2.srcs/sim_1/new/Combined_tb.v,1705811493,verilog,,,,Combined_tb,,,,,,,,
+C:/Users/student/22110169_22110203_LAB2/22110169_22110203_LAB2.srcs/sim_1/new/FullAdder_tb.v,1705816168,verilog,,,,FullAdder_tb,,,,,,,,
+C:/Users/student/22110169_22110203_LAB2/22110169_22110203_LAB2.srcs/sim_1/new/GreyConverter_tb.v,1705816896,verilog,,,,GreyConverter_tb,,,,,,,,
+C:/Users/student/22110169_22110203_LAB2/22110169_22110203_LAB2.srcs/sources_1/new/AdderSubtractor8b.v,1705816668,verilog,,C:/Users/student/22110169_22110203_LAB2/22110169_22110203_LAB2.srcs/sources_1/new/Combined.v,,AdderSubtractor8b,,,,,,,,
+C:/Users/student/22110169_22110203_LAB2/22110169_22110203_LAB2.srcs/sources_1/new/Combined.v,1705815809,verilog,,C:/Users/student/22110169_22110203_LAB2/22110169_22110203_LAB2.srcs/sources_1/new/FullAdder.v,,Combined,,,,,,,,
+C:/Users/student/22110169_22110203_LAB2/22110169_22110203_LAB2.srcs/sources_1/new/FullAdder.v,1705808359,verilog,,C:/Users/student/22110169_22110203_LAB2/22110169_22110203_LAB2.srcs/sources_1/new/GrayConverter.v,,FullAdder,,,,,,,,
+C:/Users/student/22110169_22110203_LAB2/22110169_22110203_LAB2.srcs/sources_1/new/GrayConverter.v,1705809615,verilog,,C:/Users/student/22110169_22110203_LAB2/22110169_22110203_LAB2.srcs/sim_1/new/Combined_tb.v,,GrayConverter,,,,,,,,
