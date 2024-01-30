@@ -1,0 +1,9 @@
+module top(
+    input S;
+    input Shift;
+    input Clk;
+    ouput [3:0] OUT;
+);
+    Counter();
+    ShiftRegister sr(.D(), .S(S), .Shift(Shift), .Clk(Clk), .Q(OUT));
+endmodule

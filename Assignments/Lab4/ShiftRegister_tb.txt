@@ -1,0 +1,40 @@
+module ShiftRegister_tb();
+    reg [3:0] D;
+    reg S;
+    reg [1:0] Shift;
+    reg Clk;
+    wire [3:0] Q;
+
+    ShiftRegister uut(D, S, Shift, Clk, Q);
+
+    inital 
+    begin 
+        Clk = 1;
+        forever #5 Clk = ~Clk;
+    end
+
+    inital
+    begin
+    D = 4'b0000; Shift = 2'b00;  S = 0;
+    #10;
+    D = 4'b0000; Shift = 2'b01;  S = 1;
+    #10;
+    D = 4'b0000; Shift = 2'b01;  S = 1;
+    #10;
+    D = 4'b0000; Shift = 2'b01;  S = 1;
+    #10;
+    D = 4'b0000; Shift = 2'b01;  S = 1;
+    #10;
+    D = 4'b0000; Shift = 2'b10;  S = 0;
+    #10;
+    D = 4'b0000; Shift = 2'b10;  S = 0;
+    #10;
+    D = 4'b0000; Shift = 2'b10;  S = 0;
+    #10;
+    D = 4'b0000; Shift = 2'b10;  S = 0;
+    #10;
+    D = 4'b1111; Shift = 2'b00;  S = 0;
+    #10;
+    $finish();
+    end
+endmodule
