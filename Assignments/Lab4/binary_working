@@ -1,0 +1,61 @@
+`timescale 1ns / 1ps
+module tff ( input clk, input reset, input t, input start, output reg q);  
+  
+  always @ (posedge clk) begin  
+    if (!reset)  
+      q <= 0;  
+//    else if (!preset)
+//      q <= 1;
+    else  
+        if (t)  
+            q <= ~q;  
+        else  
+            q <= q;  
+  end  
+endmodule
+
+module bin_bcd(input t, input clk, input reset, output [3:0]count, input up_down ,input bin);
+
+// and(cond1,~bin,reset);
+// and(cond2,count[3],count[1]);
+// or (cond3,reset,cond2);
+// and(cond4,cond3,bin);
+// or(cond5,cond1,cond4);
+
+and(r1,count[3],count[1],~bin);
+and(r2,reset,r1);
+or(r3,r1,reset);
+and(r4,~r2,reset);
+and(r5,r2,~r1);
+or(final,r4,r5);
+
+
+
+tff a1(.t(t),.clk(clk),.reset(final), .q(count[0]));
+//assign alpha1=count[0];
+//binary up down counter
+and(g1,~up_down,count[0]);
+and(g2,up_down,~count[0]);
+or(f1,g1,g2);
+//bcd up down counter
+
+tff a2(.t(f1),.clk(clk),.reset(final), .q(count[1]));
+//assign alpha2=count[1];
+//binary up down counter
+and(h1,g1,count[1]);
+and(h2,g2,~count[1]);
+or(f2,h1,h2);
+//bcd up down counter
+
+tff a3(.t(f2),.clk(clk),.reset(final), .q(count[2]));
+//assign alpha3=count[2];
+//binary up down counter
+and(i1,h1,count[2]);
+and(i2,h2,~count[2]);
+or(f3,i1,i2);
+//bcd up down counter
+
+tff a4(.t(f3),.clk(clk),.reset(final), .q(count[3]));
+//assign alpha4=count[3];
+
+endmodule
