@@ -14,26 +14,91 @@ module top_tb();
 
     inital
     begin
-    D = 4'b0000; Shift = 2'b00;  S = 0;
-    #10;
-    D = 4'b0000; Shift = 2'b01;  S = 1;
-    #10;
-    D = 4'b0000; Shift = 2'b01;  S = 1;
-    #10;
-    D = 4'b0000; Shift = 2'b01;  S = 1;
-    #10;
-    D = 4'b0000; Shift = 2'b01;  S = 1;
-    #10;
-    D = 4'b0000; Shift = 2'b10;  S = 0;
-    #10;
-    D = 4'b0000; Shift = 2'b10;  S = 0;
-    #10;
-    D = 4'b0000; Shift = 2'b10;  S = 0;
-    #10;
-    D = 4'b0000; Shift = 2'b10;  S = 0;
-    #10;
-    D = 4'b1111; Shift = 2'b00;  S = 0;
-    #10;
+    // Test Case 1 Binary Up
+        S = 1; Shift = 0; reset = 1; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 1; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 1; Shift = 1; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // shifting left
+        #10;
+        S = 1; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 1; Shift = 2; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // shift right
+        #10;
+        S = 1; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading 
+        #10;
+        S = 1; Shift = 1; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // shifting left
+        #10;
+        S = 1; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 1; Shift = 1; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // shifting left
+        #10;
+        S = 1; Shift = 0; reset = 1; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 1; Shift = 1; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // shifting left
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading 
+        #10;
+        S = 1; Shift = 2; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // shifting right
+        #10;
+        S = 1; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 1; Shift = 1; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // shifting left
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading 
+        #10;
+        S = 1; Shift = 2; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // shifting right
+        #10;
+        S = 1; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading 
+        #10;
+        S = 0; Shift = 2; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // shifting right
+        #10;
+        S = 1; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 1; Shift = 3; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // No shift
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0;  // loading
+        #10;
+        S = 1; Shift = 3; reset = 0; preset = 0; up_down = 0; bin_bcd = 0;  // No shift
+        #10;
+        S = 0; Shift = 0; reset = 1; preset = 0; up_down = 0; bin_bcd = 0; // starting clock again
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // starting clock again
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // No shift
+        #10;
+        S = 1; Shift = 3; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // No Shift
+        #10;
+        S = 0; Shift = 3; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // No shift
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
+        S = 0; Shift = 0; reset = 0; preset = 0; up_down = 0; bin_bcd = 0; // loading
+        #10;
     $finish();
     end
 endmodule
