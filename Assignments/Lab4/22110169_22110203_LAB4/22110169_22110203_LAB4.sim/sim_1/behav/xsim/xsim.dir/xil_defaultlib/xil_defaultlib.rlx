@@ -1,0 +1,13 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Users/student/Desktop/nimitt/22110169_22110203_LAB4/22110169_22110203_LAB4.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/Users/student/Desktop/nimitt/22110169_22110203_LAB4/22110169_22110203_LAB4.srcs/sim_1/new/Counter_tb.v,1706692700,verilog,,,,Counter_tb,,,,,,,,
+C:/Users/student/Desktop/nimitt/22110169_22110203_LAB4/22110169_22110203_LAB4.srcs/sim_1/new/ShiftRegister_tb.v,1706676998,verilog,,,,ShiftRegister_tb,,,,,,,,
+C:/Users/student/Desktop/nimitt/22110169_22110203_LAB4/22110169_22110203_LAB4.srcs/sim_1/new/tff_tb.v,1706668500,verilog,,,,tff_tb,,,,,,,,
+C:/Users/student/Desktop/nimitt/22110169_22110203_LAB4/22110169_22110203_LAB4.srcs/sim_1/new/top_tb.v,1706694824,verilog,,,,top_tb,,,,,,,,
+C:/Users/student/Desktop/nimitt/22110169_22110203_LAB4/22110169_22110203_LAB4.srcs/sources_1/new/Counter.v,1706692789,verilog,,C:/Users/student/Desktop/nimitt/22110169_22110203_LAB4/22110169_22110203_LAB4.srcs/sources_1/new/ShiftRegister.v,,Counter,,,,,,,,
+C:/Users/student/Desktop/nimitt/22110169_22110203_LAB4/22110169_22110203_LAB4.srcs/sources_1/new/ShiftRegister.v,1706690468,verilog,,C:/Users/student/Desktop/nimitt/22110169_22110203_LAB4/22110169_22110203_LAB4.srcs/sources_1/new/tff.v,,ShiftRegister,,,,,,,,
+C:/Users/student/Desktop/nimitt/22110169_22110203_LAB4/22110169_22110203_LAB4.srcs/sources_1/new/tff.v,1706678892,verilog,,C:/Users/student/Desktop/nimitt/22110169_22110203_LAB4/22110169_22110203_LAB4.srcs/sources_1/new/top.v,,tff,,,,,,,,
+C:/Users/student/Desktop/nimitt/22110169_22110203_LAB4/22110169_22110203_LAB4.srcs/sources_1/new/top.v,1706683282,verilog,,C:/Users/student/Desktop/nimitt/22110169_22110203_LAB4/22110169_22110203_LAB4.srcs/sim_1/new/top_tb.v,,top,,,,,,,,
