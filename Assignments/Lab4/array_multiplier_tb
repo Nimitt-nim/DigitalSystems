@@ -1,0 +1,21 @@
+module array_multiplier_tb();
+    reg [7:0] A;
+    reg [7:0] B;
+    wire [15:0] OUT;
+
+    array_multiplier uut(A,B,OUT);
+    A = 1; B = 1;
+    #10;
+    A = 10; B = 23;
+    #10;
+    A = 20; B = 4;
+    #10;
+    A = 127; B = 5;
+    #10;
+    A = 8; B = 45;
+    #10;
+    A = 85; B = 100;
+    #10;
+    A = 34; B = 121;
+    #10;
+endmodule
