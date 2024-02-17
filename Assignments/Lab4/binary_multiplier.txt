@@ -1,0 +1,21 @@
+timescale` 1ns/1ps
+
+module binary_multiplier(
+    input [7:0] A,
+    input [7:0] B,
+    output reg [15:0] OUT
+    );
+
+    reg [15:0] temp;
+    parameter n = 8;
+    integer k;
+    for (k = 0; k < n; k++)
+        begin 
+            if (B[k] == 0)
+                OUT <= OUT;
+            else 
+                temp = A;
+                temp << k;
+                OUT <= OUT + A;
+        end
+endmodule
