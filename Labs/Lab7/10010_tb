@@ -1,0 +1,33 @@
+module 10010_tb();
+    reg main_clk, w, reset;
+    wire z;
+
+    initial begin
+        main_clk = 0;
+        forever #5 main_clk = ~main_clk;
+    end
+
+    initial begin
+        w = 0; reset = 1;
+        #7.5;
+        w = 1; reset = 0;
+        #10;
+        w = 0; reset = 0;
+        #10;
+        w = 0; reset = 0;
+        #10;
+        w = 1; reset = 0;
+        #10;
+        w = 0; reset = 0;
+        #10;
+        w = 0; reset = 0;
+        #10;
+        w = 1; reset = 0;
+        #10;
+        w = 0; reset = 0;
+        #10;
+        w = 1; reset = 0;
+        #10;
+        $finish();
+    end
+endmodule
