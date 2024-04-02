@@ -1,0 +1,16 @@
+module clock_divider(
+    input wire clk,
+    input wire rst,
+    output reg slow_clk
+    );
+    reg [25:0] counter_26; // 26-bit counter for dividing the clock
+    always @(posedge clk) begin
+        if (counter_26 == 50000000) begin // Divide the clock by 50,000,000
+            slow_clk <= ~slow_clk;
+            counter_26 <= 0;
+            end 
+        else begin
+            counter_26 <= counter_26 + 1;
+        end
+    end
+endmodule

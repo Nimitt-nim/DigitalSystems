@@ -1,0 +1,80 @@
+module moore_10010 (Clock, w, reset, z);
+    input main_clk, w, reset; 
+    output z; 
+    reg z, y, Y; 
+    parameter A = 3'b000, B = 3'b001, C = 3'b010, D = 3'b011, E = 3'b100, F = 3'b101;
+
+    reg slow_clk
+    clock_divider inst(.clk(main_clk), .rst(reset),.slow_clk(slow_clk) )
+
+    always @(w or y)
+        begin
+            case (y)
+            A: if (w == 0)
+            begin
+            Y = A;
+            end
+            else
+            begin
+            Y = B;
+            end
+
+            B: if (w == 0)
+            begin
+            Y = C;
+            end
+            else
+            begin
+            Y = B;
+            end
+
+            C: if (w == 0)
+            begin
+            Y = D;
+            end
+            else
+            begin
+            Y = B;
+            end
+
+            D: if (w == 0)
+            begin
+            Y = A;
+            end
+            else
+            begin
+            Y = E;
+            end
+
+            E: if (w == 0)
+            begin
+            Y = F; 
+            end
+            else
+            begin
+            Y = B;
+            end
+
+            F: if (w == 0)
+            begin
+            Y = D; 
+            end
+            else
+            begin
+            Y = B;
+            end
+            endcase
+
+        end
+
+    always @(posedge slow_clk or negedge reset)
+        begin
+            if (reset == 0)
+            y <= A;
+            else
+            y <= Y;
+        end
+
+    assign z = (y == F);
+    
+endmodule
