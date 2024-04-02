@@ -74,6 +74,7 @@ module moore_10010 (Clock, w, reset, z, clk_indicator);
     always @(posedge slow_clk or negedge reset)
         begin
             if (reset == 0)
+            clk_indicator = 0;
             y <= A;
             else
             y <= Y;
