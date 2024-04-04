@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 04/02/2024 03:07:17 PM
+// Create Date: 04/04/2024 04:05:56 PM
 // Design Name: 
 // Module Name: clock_divider
 // Project Name: 
@@ -21,8 +21,8 @@
 
 
 module clock_divider(
-    input wire clk,
-    input wire rst,
+    input clk,
+    input rst,
     output slow_clk
     );
     reg [31:0] counter; // 27-bit counter for dividing the clock
@@ -30,6 +30,6 @@ module clock_divider(
 			   begin
 	            counter <= counter + 1;
 			   end
-    assign slow_clk = counter[27]
+    assign slow_clk = counter[27];
     
 endmodule

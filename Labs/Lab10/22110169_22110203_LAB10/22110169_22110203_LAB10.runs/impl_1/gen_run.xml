@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1712227550">
+  <File Type="BITSTR-BMM" Name="moore_10010_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="moore_10010_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="moore_10010_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="moore_10010_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="moore_10010.tcl"/>
+  <File Type="OPT-TIMING" Name="moore_10010_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="moore_10010_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="moore_10010_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="moore_10010_reports.tcl"/>
+  <File Type="OPT-DRC" Name="moore_10010_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="moore_10010.hwdef"/>
+  <File Type="PWROPT-DCP" Name="moore_10010_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="moore_10010_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="moore_10010_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="moore_10010_placed.dcp"/>
+  <File Type="PLACE-IO" Name="moore_10010_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="moore_10010_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="moore_10010_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="moore_10010_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="moore_10010_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="moore_10010_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="moore_10010_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="moore_10010_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="moore_10010_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="moore_10010.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="moore_10010_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="moore_10010_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="moore_10010_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="moore_10010.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="moore_10010_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="moore_10010_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="moore_10010_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="moore_10010_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="moore_10010_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="moore_10010_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="moore_10010_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="moore_10010.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="moore_10010_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="moore_10010_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="moore_10010_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="moore_10010_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="moore_10010_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="moore_10010_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="moore_10010_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="moore_10010_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="moore_10010_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="moore_10010_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="moore_10010_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="moore_10010_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="moore_10010_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="moore_10010_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="moore_10010_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="moore_10010_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="moore_10010_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="moore_10010_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="moore_10010_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="moore_10010_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="moore_10010_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="moore_10010.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="moore_10010_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="moore_10010.rbt"/>
+  <File Type="BITSTR-NKY" Name="moore_10010.nky"/>
+  <File Type="PDI-FILE" Name="moore_10010.pdi"/>
+  <File Type="RCFI_FILE" Name="moore_10010.rcfi"/>
+  <File Type="CFI_FILE" Name="moore_10010.cfi"/>
+  <File Type="RNPI_FILE" Name="moore_10010.rnpi"/>
+  <File Type="NPI_FILE" Name="moore_10010.npi"/>
+  <File Type="RBD_FILE" Name="moore_10010.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="moore_10010.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="moore_10010.sysdef"/>
+  <File Type="BG-BGN" Name="moore_10010.bgn"/>
+  <File Type="BG-DRC" Name="moore_10010.drc"/>
+  <File Type="RDI-RDI" Name="moore_10010.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/clock_divider.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/moore_10010.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mealey_10010.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="moore_10010"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/moore_10010.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/moore_10010.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

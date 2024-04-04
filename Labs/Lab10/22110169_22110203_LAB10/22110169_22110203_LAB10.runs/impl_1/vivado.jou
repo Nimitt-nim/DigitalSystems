@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Apr  4 16:17:07 2024
+# Process ID: 4356
+# Current directory: C:/Users/student/Desktop/22110169_22110203_LAB10/22110169_22110203_LAB10.runs/impl_1
+# Command line: vivado.exe -log moore_10010.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source moore_10010.tcl -notrace
+# Log file: C:/Users/student/Desktop/22110169_22110203_LAB10/22110169_22110203_LAB10.runs/impl_1/moore_10010.vdi
+# Journal file: C:/Users/student/Desktop/22110169_22110203_LAB10/22110169_22110203_LAB10.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source moore_10010.tcl -notrace

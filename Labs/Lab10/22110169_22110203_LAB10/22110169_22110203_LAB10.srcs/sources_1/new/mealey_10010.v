@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 04/02/2024 03:07:17 PM
+// Create Date: 04/04/2024 04:04:59 PM
 // Design Name: 
 // Module Name: mealey_10010
 // Project Name: 
@@ -26,10 +26,10 @@ module mealey_10010 (main_clk, w, reset, z, slow_clk);
     output slow_clk;
     reg z, y, Y; 
     parameter A = 3'b000, B = 3'b001, C = 3'b010, D = 3'b011, E = 3'b100;
-    
+
     wire slow_clk;
     clock_divider inst(.clk(main_clk), .rst(reset),.slow_clk(slow_clk));
-
+    
     always @(w or y)
         begin
             case (y)
