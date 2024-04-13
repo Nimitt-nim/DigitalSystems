@@ -1,0 +1,51 @@
+module comparator(
+    input [31:0] num1,
+    input [31:0] num2,
+    output reg [1:0] result // 2-bit result: 00 for equal, 01 for num1 greater, 10 for num2 greater
+);
+
+always @(*) begin
+    // Extracting sign bit, exponent, and mantissa for number 1
+    reg sign1;
+    reg [7:0] exponent1;
+    reg [22:0] mantissa1;
+    sign1 = num1[31];
+    exponent1 = num1[30:23];
+    mantissa1 = num1[22:0];
+
+    // Extracting sign bit, exponent, and mantissa for number 2
+    reg sign2;
+    reg [7:0] exponent2;
+    reg [22:0] mantissa2;
+    sign2 = num2[31];
+    exponent2 = num2[30:23];
+    mantissa2 = num2[22:0];
+
+    // Comparing sign bits
+    if (sign1 != sign2) begin
+        if (sign1 == 0)
+            result = 2'b01; // num1 is greater
+        else
+            result = 2'b10; // num2 is greater
+    end else begin
+        // Comparing exponents
+        if (exponent1 != exponent2) begin
+            if (exponent1 > exponent2)
+                result = 2'b01; // num1 is greater
+            else
+                result = 2'b10; // num2 is greater
+        end else begin
+            // Comparing mantissas
+            if (mantissa1 != mantissa2) begin
+                if (mantissa1 > mantissa2)
+                    result = 2'b01; // num1 is greater
+                else
+                    result = 2'b10; // num2 is greater
+            end else begin
+                result = 2'b00; // numbers are equal
+            end
+        end
+    end
+end
+
+endmodule
