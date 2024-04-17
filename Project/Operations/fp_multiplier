@@ -1,0 +1,32 @@
+module fp_matmul(A, B, C);
+parameter bw=32; //bit width
+parameter n=3; //matrix size
+input [bw*n*n - 1:0] A;
+input [bw*n - 1:0] B;
+output [bw*n - 1:0] C;     //A High indicates that multiplication is done and result is availble at C.
+
+genvar i,j;  //loop indices
+
+
+wire [bw-1:0]mult_mid[(n*n)-1:0];
+wire [bw-1:0]add_mid[(n-1)*n - 1:0];  
+generate
+    for(i=0; i<n; i=i+1)
+    begin
+        for(j=0; j<n; j=j+1)
+        begin
+        multiplier_fp mult(.a_operand(A[(i*n+j)*bw+:bw]), .b_operand(B[j*bw+:bw]),.Exception(),.Overflow(),.Underflow(), .result(mult_mid[i*n+j]));
+        end
+    end
+endgenerate
+
+Addition_Subtraction add1(.a_operand(mult_mid[0]),.b_operand(mult_mid[1]),.AddBar_Sub(0),.Exception(),.result(add_mid[0]));
+Addition_Subtraction add2(.a_operand(add_mid[0]),.b_operand(mult_mid[2]),.AddBar_Sub(0),.Exception(),.result(add_mid[1]));
+Addition_Subtraction add3(.a_operand(mult_mid[3]),.b_operand(mult_mid[4]),.AddBar_Sub(0),.Exception(),.result(add_mid[2]));
+Addition_Subtraction add4(.a_operand(add_mid[2]),.b_operand(mult_mid[5]),.AddBar_Sub(0),.Exception(),.result(add_mid[3]));
+Addition_Subtraction add5(.a_operand(mult_mid[6]),.b_operand(mult_mid[7]),.AddBar_Sub(0),.Exception(),.result(add_mid[4]));
+Addition_Subtraction add6(.a_operand(add_mid[4]),.b_operand(mult_mid[8]),.AddBar_Sub(0),.Exception(),.result(add_mid[5]));
+
+assign C = {add_mid[1], add_mid[3], add_mid[5]};
+
+endmodule
