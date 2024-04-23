@@ -33,7 +33,7 @@ parameter bym = 27;
 
 input clk, ena, wea;
 input [bw-1:0]dina;
-input [enc*seq_length-1:0]word;
+input [bw*enc*seq_length-1:0]word;
 output [bw*enc-1:0]pred;
 output [5:0]predicted_char;
 wire [bw*wfm*wfn-1:0]wf;
