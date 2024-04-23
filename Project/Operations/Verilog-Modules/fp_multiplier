@@ -1,4 +1,4 @@
-module mulitplier(
+module multiplier_fp(
 		input [31:0] a_operand,
 		input [31:0] b_operand,
 		output Exception,Overflow,Underflow,
