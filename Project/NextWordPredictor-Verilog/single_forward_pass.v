@@ -29,9 +29,9 @@ parameter bom = 25;
 parameter wym=27, wyn=25;
 parameter bym = 27;
 
-input [enc-1:0]char;
-input [hidden_size-1:0]cell_state;
-input [hidden_size-1:0]hidden_state;
+input [bw*enc-1:0]char;
+input [bw*(hidden_size)-1:0]cell_state;
+input [bw*(hidden_size)-1:0]hidden_state;
 input [bw*wfm*wfn-1:0]wf;
 input [bw*bfm-1:0]bf;
 input [bw*wim*win-1:0]wi;
@@ -43,10 +43,10 @@ input [bw*bom-1:0]bo;
 input [bw*wym*wyn-1:0]wy;
 input [bw*bym-1:0]by;
 output [bw*enc-1:0]pred;
-output [hidden_size-1:0]cell_state_updated;
-output [hidden_size-1:0]hidden_state_updated;
+output [bw*hidden_size-1:0]cell_state_updated;
+output [bw*hidden_size-1:0]hidden_state_updated;
 
-wire [25+enc-1:0]X={hidden_state, char};
+wire [bw*(25+enc)-1:0]X={hidden_state, char};
 wire [bw*wfm-1:0]Cf1;
 wire [bw*wcm-1:0]Cc1;
 wire [bw*wim-1:0]Ci1;
@@ -55,8 +55,8 @@ wire [bw*bfm-1:0]Cf;
 wire [bw*bcm-1:0]Cc;
 wire [bw*bim-1:0]Ci;
 wire [bw*bom-1:0]Co;
-wire [hidden_size-1:0]cell_state_updated_mid;
-wire [hidden_size-1:0]hidden_state_updated_mid;
+wire [bw*hidden_size-1:0]cell_state_updated_mid;
+wire [bw*hidden_size-1:0]hidden_state_updated_mid;
 wire [bw*bym-1:0]out_mid;
 
 fp_matmul #(.bw(bw), .m(wfm), .n(wfn)) matmul1(.A(wf), .B(X), .C(Cf1));
@@ -74,7 +74,8 @@ wire [bw*bcm-1:0]input_gate;
 wire [bw*bim-1:0]candidate_gate;
 wire [bw*bom-1:0]output_gate;
 
-genvar i;
+genvar i;   
+
 generate
     for(i=0; i<bfm; i=i+1)
     begin
