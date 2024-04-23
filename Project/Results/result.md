@@ -1,0 +1,1 @@
+We successfully implemented an LSTM model on Nexys FPGA board. The model could predict next character on taking some input text.
