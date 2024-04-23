@@ -31,7 +31,7 @@ parameter bom = 25;
 parameter wym=27, wyn=25;
 parameter bym = 27;
 
-input [enc*seq_length-1:0]word;
+input [bw*enc*seq_length-1:0]word;
 input [bw*wfm*wfn-1:0]wf;
 input [bw*bfm-1:0]bf;
 input [bw*wim*win-1:0]wi;
@@ -45,8 +45,8 @@ input [bw*bym-1:0]by;
 output [bw*enc-1:0]pred;
 output [5:0]predicted_char;
 
-wire [hidden_size-1:0] hidden_state_mid[seq_length:0];
-wire [hidden_size-1:0] cell_state_mid[seq_length:0];
+wire [bw*hidden_size-1:0] hidden_state_mid[seq_length:0];
+wire [bw*hidden_size-1:0] cell_state_mid[seq_length:0];
 wire [bw*enc-1:0]pred_mid[seq_length-1:0];
 assign hidden_state_mid[0]=0;
 assign cell_state_mid[0]=0;
@@ -55,10 +55,10 @@ genvar i;
 generate
     for(i=0; i<seq_length; i=i+1)
     begin
-    forward_pass fp(.char(word[i*enc+:enc]), .cell_state(cell_state_mid[i]), .hidden_state(hidden_state_mid[i]), .wf(wf), .bf(bf), .wi(wi), .bi(bi), .wc(wc), .bc(bc), .wo(wo), .bo(bo) ,.wy(wy), .by(by), .hidden_state_updated(hidden_state_mid[i+1]) ,.cell_state_updated(cell_state_mid[i+1]), .pred(pred_mid[i]));
+    forward_pass fp(.char(word[i*bw*enc+:bw*enc]), .cell_state(cell_state_mid[i]), .hidden_state(hidden_state_mid[i]), .wf(wf), .bf(bf), .wi(wi), .bi(bi), .wc(wc), .bc(bc), .wo(wo), .bo(bo) ,.wy(wy), .by(by), .hidden_state_updated(hidden_state_mid[i+1]) ,.cell_state_updated(cell_state_mid[i+1]), .pred(pred_mid[i]));
     end
 endgenerate
-
+ 
 assign pred = pred_mid[seq_length-1];
 
 wire [bw-1:0]max;
